@@ -58,7 +58,7 @@ public class DockerJavaApplication {
 	@GetMapping("/getDB")
 	public String getDataBase() {
 		try {
-			return MYSQLApplication.getDataBaseConnectionCheck();
+			return MYSQLApplications.getDataBaseConnectionCheck();
 		} catch (Exception e) {
 			e.printStackTrace();
 			return e.getMessage();

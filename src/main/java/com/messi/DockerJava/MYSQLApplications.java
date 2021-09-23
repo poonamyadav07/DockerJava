@@ -11,20 +11,20 @@ import java.util.Properties;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-public class MYSQLApplication {
+public class MYSQLApplications {
 	
 	private static final Logger log;
 
     static {
         System.setProperty("java.util.logging.SimpleFormatter.format", "[%4$-7s] %5$s %n");
-        log =Logger.getLogger(MYSQLApplication.class.getName());
+        log =Logger.getLogger(MYSQLApplications.class.getName());
     }
 
     public static String getDataBaseConnectionCheck(){
         try {
 			log.info("Loading application properties");
 			Properties properties = new Properties();
-			properties.load(MYSQLApplication.class.getClassLoader().getResourceAsStream("application.properties"));
+			properties.load(MYSQLApplications.class.getClassLoader().getResourceAsStream("application.properties"));
 
 			log.info("Connecting to the database");
 			Connection connection = DriverManager.getConnection(properties.getProperty("url"), properties);
