@@ -29,6 +29,10 @@
               
         </Class>
         
+        <BuiltIn>
+         <Logging enabled="true"/>
+      </BuiltIn>
+        
       </Instrumentation>
     </ApplicationInsightsAgent>
 
